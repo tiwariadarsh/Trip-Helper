@@ -5,11 +5,9 @@ import { StarFill, PinFill } from "react-bootstrap-icons";
 import axios from "axios";
 import { format } from "timeago.js";
 import { Card, Form, Button } from "react-bootstrap";
-import 'mapbox-gl/dist/mapbox-gl.css';
-import mapboxgl from 'mapbox-gl';
 
 export default function Home({ currUser, setCurruser }) {
-  mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+ 
   const REACT_APP_MAPBOX =
     "pk.eyJ1IjoiYWRhcnNoMjE0MSIsImEiOiJja3NicDBqdXEwOHhzMzJwa2w2dnRobTBrIn0.4T4G4pvs4ESbLqJ2YZNH9w";
   const [viewport, setViewport] = useState({
