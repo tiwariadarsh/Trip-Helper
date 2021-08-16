@@ -21,6 +21,9 @@ app.use("/", pinroute);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("pathfinder/build"));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'pathfinder', 'build', 'index.html'));
+});
 }
 
 app.listen(PORT, (req, res) => {
